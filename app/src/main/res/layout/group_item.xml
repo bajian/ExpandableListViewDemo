@@ -10,6 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:orientation="horizontal"
+    android:background="@drawable/bt_selector_shape"
 >
 
 <ImageView
@@ -18,35 +19,21 @@
     android:src="@mipmap/timeline_background"
     />
 
+    <View
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_weight="8"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#aea9a9"
+        android:layout_gravity="center"
+        ></View>
 <ImageView
     android:layout_width="40dp"
     android:layout_height="40dp"
     android:src="@mipmap/timeline_background"
     />
 
-<ImageView
-    android:layout_width="40dp"
-    android:layout_height="40dp"
-    android:src="@mipmap/timeline_background"
-    />
-
-<ImageView
-    android:layout_width="40dp"
-    android:layout_height="40dp"
-    android:src="@mipmap/timeline_background"
-    />
-
-<ImageView
-    android:layout_width="40dp"
-    android:layout_height="40dp"
-    android:src="@mipmap/timeline_background"
-    />
-
-<ImageView
-    android:layout_width="40dp"
-    android:layout_height="40dp"
-    android:src="@mipmap/timeline_background"
-    />
 
 
 </LinearLayout>

@@ -81,14 +81,14 @@ public class ExpandableAdapter extends BaseExpandableListAdapter
 //        parent.setClickable(false);
         View view = activity.getLayoutInflater().inflate(R.layout.group_item, parent, false);
         return view;
-//        return getGenericGroupView(string);
     }
     // View stub to create Group/Children 's View
     public TextView getGenericView(String string)
     {
+        //演示案例，实际案例要用viewholder
         // Layout parameters for the ExpandableListView
         AbsListView.LayoutParams layoutParams = new AbsListView.LayoutParams(
-                ViewGroup.LayoutParams.FILL_PARENT, 64);
+                ViewGroup.LayoutParams.MATCH_PARENT, 64);
         TextView text = new TextView(activity);
         text.setLayoutParams(layoutParams);
         // Center the text vertically
@@ -99,21 +99,6 @@ public class ExpandableAdapter extends BaseExpandableListAdapter
         return text;
     }
 
-    // View stub to create Group
-    public TextView getGenericGroupView(String string)
-    {
-        // Layout parameters for the ExpandableListView
-        AbsListView.LayoutParams layoutParams = new AbsListView.LayoutParams(
-                ViewGroup.LayoutParams.FILL_PARENT, 64);
-        TextView text = new TextView(activity);
-        text.setLayoutParams(layoutParams);
-        // Center the text vertically
-        text.setGravity(Gravity.CENTER_VERTICAL | Gravity.LEFT);
-        // Set the text starting position
-        text.setPadding(36, 0, 0, 0);
-        text.setText(string);
-        return text;
-    }
 
     public boolean hasStableIds()
     {
