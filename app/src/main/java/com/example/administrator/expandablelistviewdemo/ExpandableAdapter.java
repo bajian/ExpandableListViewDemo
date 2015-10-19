@@ -77,9 +77,11 @@ public class ExpandableAdapter extends BaseExpandableListAdapter
     public View getGroupView(int groupPosition, boolean isExpanded,
                              View convertView, ViewGroup parent)
     {
-        String string = groupArray.get(groupPosition);
-        parent.setClickable(false);
-        return getGenericGroupView(string);
+//        String string = groupArray.get(groupPosition);
+//        parent.setClickable(false);
+        View view = activity.getLayoutInflater().inflate(R.layout.group_item, parent, false);
+        return view;
+//        return getGenericGroupView(string);
     }
     // View stub to create Group/Children 's View
     public TextView getGenericView(String string)
@@ -120,5 +122,13 @@ public class ExpandableAdapter extends BaseExpandableListAdapter
     public boolean isChildSelectable(int groupPosition, int childPosition)
     {
         return true;
+    }
+
+    class childholder{
+        TextView tv;
+    }
+
+    class groupholder{
+        TextView tv;
     }
 }
